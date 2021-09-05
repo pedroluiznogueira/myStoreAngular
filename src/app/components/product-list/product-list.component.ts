@@ -13,6 +13,11 @@ export class ProductListComponent {
   share() {
     window.alert('The product has been shared!');
   }
+
+  // função chamada ao escutar Event Emmiter
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
+  }
 }
 
 

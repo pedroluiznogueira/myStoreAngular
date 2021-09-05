@@ -6,7 +6,7 @@
         <a [title]="product.name + ' details'">{{ product.name }}</a>
         <p *ngIf="product.description">Description: {{ product.description }}</p>
         <div><button (click)="share()">Share</button></div>
-        <app-product-alerts [a]="product"></app-product-alerts>
+        <app-product-alerts [a]="product" (notify)="onNotify()"></app-product-alerts>
     </h3>
 </div>
 
