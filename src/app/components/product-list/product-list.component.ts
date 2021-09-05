@@ -7,6 +7,7 @@ import { products } from 'src/app/products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  // passando o array de products para esse componente
   products = products;
 
   share() {
