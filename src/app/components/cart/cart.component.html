@@ -1,1 +1,7 @@
-<p>cart works!</p>
+<h3> Cart </h3>
+
+<!-- para cada item o carrinho, vai mostrar seu nome e preço -->
+<div class="cart-item" *ngFor="let item of items">
+    <span> {{ item.name }}</span>
+    <span> {{ item.price | currency }} </span>
+</div>

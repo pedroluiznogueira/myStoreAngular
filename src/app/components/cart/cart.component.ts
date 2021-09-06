@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/Products';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  // acessando os produtos que estão no carrinho para que sejam mostrados no cart component
+  items: Product[] = this.cartService.getItems();
+
+  constructor(
+    // precisa passar o cartService no constructor como parâmetro
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
   }
-
 }
+

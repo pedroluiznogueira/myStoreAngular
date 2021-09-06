@@ -10,10 +10,11 @@ import { CartService } from 'src/app/services/cart.service';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product | undefined;
-  cartService: CartService = new CartService();
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    // precisa passar o cartService no constructor como parâmetro
+    private cartService: CartService,
     ) { }
 
   ngOnInit(): void {
@@ -26,9 +27,9 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   buyProduct(product: Product) {
-    // usando a função para adicionar o produto ao carrinho quando o usuario chamar buyProduct ao clicar para comprar 
+    // adicionando o produto no carrinho de produtos do serviço
     this.cartService.addToCart(product);
-    window.alert("Your product has been added to your cart!");
+    // window.alert("Your product has been added to the cart!");
   }
 
 }
