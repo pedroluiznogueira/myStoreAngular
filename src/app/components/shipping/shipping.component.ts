@@ -8,6 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ShippingComponent implements OnInit {
 
+  // pegando os shipping prices
   shippingCosts = this.cartService.getShippingPrices();
 
   constructor(

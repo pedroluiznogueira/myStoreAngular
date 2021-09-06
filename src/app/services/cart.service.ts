@@ -22,7 +22,7 @@ export class CartService {
     return this.items;
   }
 
-  clearCart(product: Product) {
+  clearCart() {
     this.items = [];
     return this.items;
   }

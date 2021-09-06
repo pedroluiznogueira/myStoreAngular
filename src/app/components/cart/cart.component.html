@@ -11,3 +11,27 @@
         Shipping Prices
     </button>
 </div>
+
+<br>
+
+<!-- formGroup relaciona os dados enviados ao meu checkoutForm object da classe, escuto o evento com ngSubmit -->
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="name">
+            Name
+        </label>
+        <!-- relacionando o checkoutForm.name ao conteudo do input -->
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+        <label for="adress">
+            Adress
+        </label>
+        <!-- relacionando o checkoutForm.adress ao conteudo do input -->
+        <input id="adress" type="text" formControlName="adress">
+    </div>
+
+    <button class="button" type="submit">Purchase</button>
+</form>
